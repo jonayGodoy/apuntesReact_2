@@ -39,8 +39,8 @@ const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) =>{
         error={errors.length}
       />
 
-      <TextInput
-        name="submit"
+      <input
+        type="submit"
         disable={loading}
         value={loading ? 'Saving...' : 'Save'}
         className="btn btn-primary"
