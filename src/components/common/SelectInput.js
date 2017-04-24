@@ -6,13 +6,14 @@ const SelectInput = ({name, label, onChange,
       <div className="form-group">
         <label htmlFor={name}>{label}</label>
         <div className="field">
-          <select>
+          <select
             name={name}
             value={value}
             onChange={onChange}
+            className="form-control">
             <option value="">{defaultOption}</option>
             {options.map((option) => {
-              return <option key={option.value} value={option.value}>{option.text}</option>
+              return <option key={option.value} value={option.value}>{option.text}</option>;
             })
             }
           </select>
@@ -31,3 +32,5 @@ SelectInput.propTypes = {
   error: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.object)
 };
+
+export default SelectInput;
