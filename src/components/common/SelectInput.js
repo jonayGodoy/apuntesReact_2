@@ -27,7 +27,7 @@ SelectInput.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  defaultOption: PropTypes.func.isRequired,
+  defaultOption: PropTypes.string.isRequired,
   value: PropTypes.string,
   error: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.object)
