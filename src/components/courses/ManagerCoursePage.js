@@ -31,7 +31,11 @@ class ManagerCoursePage extends React.Component {
     event.preventDefault();
     this.setState({saving: true});
     this.props.actions.saveCourse(this.state.course)
-      .then(() => this.redirect());
+      .then(() => this.redirect())
+      .catch(error => {
+        toastr.error(error);
+        this.setState({saving: false});
+      });
   }
 
   redirect(){
