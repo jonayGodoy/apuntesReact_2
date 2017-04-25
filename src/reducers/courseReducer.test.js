@@ -23,6 +23,5 @@ describe("Course Reducer", () => {
     expect(updateCourse.title).toEqual('New Title');
     expect(untouchedCourse.title).toEqual('A');
     expect(newState.length).toEqual(3);
-
   });
 });
